@@ -1,0 +1,1 @@
+建立2个堆，大堆比小堆的数小，注意初始化要重写priorityqueue的comparator

@@ -1,0 +1,22 @@
+此题最优解是KMP算法，比较难懂
+
+With this in mind, I can now give the one-sentence meaning of the values in the partial match table:
+
+The length of the longest proper prefix in the (sub)pattern that matches a proper suffix in the same (sub)pattern.
+
+Examples of lps[] construction:
+For the pattern “AAAA”, 
+lps[] is [0, 1, 2, 3]
+
+For the pattern “ABCDE”, 
+lps[] is [0, 0, 0, 0, 0]
+
+For the pattern “AABAACAABAA”, 
+lps[] is [0, 1, 0, 1, 2, 0, 1, 2, 3, 4, 5]
+
+For the pattern “AAACAAAAAC”, 
+lps[] is [0, 1, 2, 0, 1, 2, 3, 3, 3, 4] 
+
+For the pattern “AAABAAA”, 
+lps[] is [0, 1, 2, 0, 1, 2, 3]
+

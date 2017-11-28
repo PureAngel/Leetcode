@@ -1,0 +1,17 @@
+注意：circle不一定是从head开始的哦
+
+两个pointer，一个快一个慢，2倍pace关系
+
+Define two pointers slow and fast. Both start at head node, 
+fast is twice as fast as slow. 
+If it reaches the end it means there is no cycle, 
+otherwise eventually it will eventually catch up to slow pointer somewhere in the cycle.
+
+Let the distance from the first node to the the node where cycle begins be A, 
+and let say the slow pointer travels travels A+B. 
+The fast pointer must travel 2A+2B to catch up. 
+The cycle size is N. 
+Full cycle is also how much more fast pointer has traveled than slow pointer at meeting point.
+
+A+B+N = 2A+2B
+N=A+B

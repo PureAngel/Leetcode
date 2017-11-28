@@ -1,0 +1,2 @@
+DP算法
+不断更新rob和notRob的值，最后得到最终rob和notRob的最大值
