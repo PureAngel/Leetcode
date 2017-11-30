@@ -9,28 +9,22 @@ public class SplitLinkedListinParts {
 			node = node.next;
 		}
 		
-		int each_num, first_num, group = 0;
-		if(node_num <= k) {
-			each_num = 1;
-		} else {
-			if(node_num % k == 0) {
-				each_num = node_num / k;
-				first_num = each_num;
-			} else {
-				each_num = node_num / k;
-				first_num = each_num + 1;
-				group = each_num % k;
-			}
-		}
-		
 		ListNode[] result = new ListNode[k];
+		int each_num = node_num / k, remain = node_num % k;
 		node = root;
-		int current_num = 1;
 		for(int i = 0; i < k; i++) {
-			if(group > 0) {
-				
+			ListNode head = new ListNode(0);
+			ListNode temp = head;
+			for(int j = 0; j < each_num + (i < remain ? 1 : 0); j++) {
+				temp.next = new ListNode(node.val);
+				temp = temp.next;
+				if(node != null) {
+					node = node.next;
+				}
+				result[i] = head.next;
 			}
 		}
+		return result;
 	}
 
 }
