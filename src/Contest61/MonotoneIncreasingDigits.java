@@ -34,7 +34,7 @@ public class MonotoneIncreasingDigits {
 		for(i = 9; i >= 0; i--) {
 			if(digits[i] != 0) break;
 		}
-		int[] result = new int[i + 1];
+		int[] result = new int[i + 1]; // delete leading zeroes
 		int len = i;
 		int res = 0;
 		while(i > 0) {
