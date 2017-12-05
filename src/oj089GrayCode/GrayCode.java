@@ -30,6 +30,7 @@ import java.util.List;
 public class GrayCode {
 	public List<Integer> grayCode(int n) {
 		List<Integer> result = new ArrayList<>();
+		result.add(0);
 		for(int i = 0; i < n; i++) {
 			int count = result.size();
 			while(count > 0) {
