@@ -12,8 +12,10 @@ public class TwoSumOptional2pass {
 		
 		for(int i = 0; i < nums.length; i++){
 			int complement = target - nums[i];
-			if(map.containsKey(complement)){
+			if(i != map.get(complement)){
+				if(map.containsKey(complement)){
 				return new int[]{i, map.get(complement)};
+			}
 			} 
 		}
 		throw new IllegalArgumentException("No two sum solution.");
